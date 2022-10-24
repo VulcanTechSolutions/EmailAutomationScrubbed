@@ -1,0 +1,122 @@
+* 1 FETCH (UID 1 FLAGS (\Seen) BODY[] {6566}
+Delivered-To: vulcantechimp@gmail.com
+Received: by 2002:ac9:SCRUBBED:0:0:0:0:0 with SMTP id u42csp372291occ;
+        Sat, 17 Sep 2022 17:43:57 -0700 (PDT)
+X-Received: by 2002:a65:4bc3:0:b0:439:103b:fc35 with SMTP id p3-20020a654bc3000000b00439103bfc35mr10231119pgr.248.1663461837182;
+        Sat, 17 Sep 2022 17:43:57 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1663461837; cv=none;
+        d=google.com; s=arc-20160816;
+        b=QhxgH+rawC3k6B8IFgwR1IUlZuQWSOwzokSispS2BASEEG1vaY7iXS8t0h0FzX1wgq
+         zfqZSs3TuNtx7U3ST4lBkFCCYz3h7CgYp5t0DVJxsQ8hxgNrlsoTAtR8ce9pfBli+U+R
+         Q/RJuvDJChLmfaRMrkeOi4Aqa7zhRY2y+lc7C5j2Y0JTw+Qip+6DkBkEgiUegcYJc0B2
+         8C7TIEwfzrpIJfR5J6PyalmxSK7oDAIreka9fDAL8B0CR3pjRgmIF9B/yvnWMNw0CtiM
+         uZfKu2hmEfYWwLaysQzIJs2KVEtSSvCfS0xbszggE4wD4qSPgMuSVefhsEze6vEFC0lF
+         cefA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=x3KHboUxRSamOcYkB9jMJ/mcG5hMgi5lX7imp50BGQw=;
+        b=oS2n4Ksm1+sGgZmHLFCzYxV+EYjgFfoe0JhV3hciMoUXYf0CU3y/JniZCzN04B4soj
+         4Zgrea1TwZS8d/MvPqKjXx6crfVQjBWog77pQYvnWXu/YUy8LBcHfJhUT0E9Vdm2HklQ
+         hbczeCU9PuIzB16iDqCzf8b1we9SvCXfbJ6ls0C/lEqZqmFuNUgIzssDivtshmJveNJ7
+         7L8vJLw2GLYx3ituOvivFnoCt1UwW3wf4nlzXEsao7S22bGmmrj3lsQaClr2JJwp1YGK
+         f/LXdDLGYCFD4RZUkle3T98gF0L1B1OOVkGlXn4ZQdgkX66APBMdrPC21V0pp9PalC5H
+         zhSA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20210112 header.b=LzuA0Ofn;
+       spf=pass (google.com: domain of vulcantechnologysolutions@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=vulcantechnologysolutions@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <vulcantechnologysolutions@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id s23-20020a17090a881700b001fdd52ed5cdsor2595553pjn.1.2022.09.17.17.43.57
+        for <vulcantechimp@gmail.com>
+        (Google Transport Security);
+        Sat, 17 Sep 2022 17:43:57 -0700 (PDT)
+Received-SPF: pass (google.com: domain of vulcantechnologysolutions@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20210112 header.b=LzuA0Ofn;
+       spf=pass (google.com: domain of vulcantechnologysolutions@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=vulcantechnologysolutions@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20210112;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date;
+        bh=x3KHboUxRSamOcYkB9jMJ/mcG5hMgi5lX7imp50BGQw=;
+        b=LzuA0OfnU+Jp5YgE2oecckdOvC+uD0Mxx1rGcMoNCUUfGmwNRECFfCtq42N0WTnFeD
+         FNDvVWuDBLTRJzmxhWQ6r+uYu0nF99ZKUIO8t99HN96MKUlkpcu8MapZnkd5JpRCyIoW
+         4GNjxX0y4Qbv8brAOpg2HDK4CXOshYMAwb3y6Tk4qVt+lqETR0r93Mb4TylJ7S8926lm
+         oTBQqh+25ta0b5SoRiOwV9rPGA4LfJ0F3dhbJtz13Ko9RnZBWDcGb4QOcCiQN0x8YDpv
+         vmXJYleN6H2FdQsh33oBvyzq3ol59ocuojoh5rGxxhXkQjPFLMU6NyKHknQzS/lLNuuP
+         O80g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date;
+        bh=x3KHboUxRSamOcYkB9jMJ/mcG5hMgi5lX7imp50BGQw=;
+        b=eR5OEwCaPQJ5GjQPAr+Ewz19Jhs8I6PR6UncvHWSy0lKHXuizJLCW0al60pydbhyLD
+         E2aWQ2lELRdEixVC5Ez7KHhlVGtz6ZyinKbwqwxQELdjcK39x5vrFCaaaau2BjWJsUHI
+         mzeydJ3HXM6zoxu9E07a41D93s7x2I9JhnOd0VZa8xsOQGZEqeyT/5G7P2fmKX3rkE4K
+         RTCeo2v9Xpnj9MIiFe4c/lfJTK1Xg9IV3vMAt9w7CEmkEPVpRzE+ibvLo0WGBrJSaFUv
+         QIvr9rXCxjUtY5DQ2Hbh0hlUaULu70+LmZ/IQVaEnWz3Zr/XrvE66SC6N2PHplUGiNXz
+         mh/g==
+X-Gm-Message-State: ACrzQf0P767R8mD/UJ4Q1Ld8p6pKyvlKb1y+utUNabKfq61C4Zd0ScwV
+	+Nb/dpQY7o4runIe/wPZgeDAW8PudvRnV5Tgg9W4+JHH
+X-Google-Smtp-Source: AMsMyM5BXDWdo23i0okG8Y+yz/OTTRuKN2DjDAMe+/N8nAPVJJDl3avSdaClfTiEhUkLDzHStzSoh2ulg5WNOg+S9A8=
+X-Received: by 2002:a17:90a:4590:b0:203:3947:1a81 with SMTP id
+ v16-20020a17090a459000b0020339471a81mr15199776pjg.11.1663461836665; Sat, 17
+ Sep 2022 17:43:56 -0700 (PDT)
+MIME-Version: 1.0
+References: <E1oZgj3-006C9K-5O@a2plcpnl0870.prod.iad2.secureserver.net>
+In-Reply-To: <E1oZgj3-006C9K-5O@a2plcpnl0870.prod.iad2.secureserver.net>
+From: Nyx Pass <vulcantechnologysolutions@gmail.com>
+Date: Sat, 17 Sep 2022 20:43:47 -0400
+Message-ID: <CALjyLRyS4fzGdyL=RqjUmVwbtkpBzC7Ft-Q+OuFjTUmPk2XaCg@mail.gmail.com>
+Subject: Fwd: SawsAndBlades - Unsubscribe request
+To: "vulcantechimp@gmail.com" <vulcantechimp@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000df380605e8e8e3a8"
+
+--000000000000df380605e8e8e3a8
+Content-Type: text/plain; charset="UTF-8"
+
+---------- Forwarded message ---------
+From: <website@sawsandblades.com>
+Date: Sat, Sep 17, 2022 at 6:56 PM
+Subject: SawsAndBlades - Unsubscribe request
+To: <SCRUBBED@SCRUBBED.com>, <SCRUBBED@gmail.com>
+
+
+Admin,
+
+The following individual has asked to be unsubscribed from the email list:
+
+E-mail: SCRUBBED@SCRUBBED.com
+
+
+Sender's IP address: SCRUBBED
+
+--000000000000df380605e8e8e3a8
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=
+=3D"gmail_attr">---------- Forwarded message ---------<br>From: <span dir=
+=3D"auto">&lt;<a href=3D"mailto:website@sawsandblades.com">website@sawsandb=
+lades.com</a>&gt;</span><br>Date: Sat, Sep 17, 2022 at 6:56 PM<br>Subject: =
+SawsAndBlades - Unsubscribe request <br>To:  &lt;<a href=3D"mailto:SCRUBBED@SCRUBBED.com">SCRUBBED@SCRUBBED.com</a>&gt;,  &lt;<a href=3D"mailto:=
+vulcantechnologysolutions@gmail.com">vulcantechnologysolutions@gmail.com</a=
+>&gt;<br></div><br><br>Admin,<br>
+<br>
+The following individual has asked to be unsubscribed from the email list:<=
+br>
+<br>
+E-mail: <a href=3D"mailto:SCRUBBED@SCRUBBED.com" target=3D"_blank">SCRUBBED=
+m@SCRUBBED.com</a><br>
+<br>
+<br>
+Sender&#39;s IP address: SCRUBBED<br>
+<br>
+</div></div>
+
+--000000000000df380605e8e8e3a8--
+)
+* 1 FETCH (UID 1 FLAGS (\Seen)
